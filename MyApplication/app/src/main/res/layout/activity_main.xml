@@ -1,65 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.rent.myapplication.MainActivity">
 
     <ImageView
-        android:layout_gravity="center"
         android:id="@+id/image_view"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/pobrane" />
+        android:layout_gravity="center" />
 
     <TextView
-        android:layout_margin="10dp"
         android:id="@+id/city"
-        android:layout_gravity="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/image_view"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         tools:text="WARSZAWA" />
+    <TextView
+        android:id="@+id/sky_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="24sp"
+        tools:text="Sky" />
 
     <TextView
-        android:layout_margin="10dp"
-        android:layout_gravity="center"
         android:id="@+id/temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
         android:textSize="54sp"
-        tools:text="17  \u00b0"/>
-    <TextView
-        android:layout_gravity="center"
-        android:id="@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_margin="10dp"
-        android:layout_gravity="center"
-        android:id="@+id/numidity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_margin="10dp"
-        android:layout_gravity="center"
-        android:id="@+id/wind"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_margin="10dp"
-        android:layout_gravity="center"
-        android:id="@+id/date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_margin="10dp"
-        android:layout_gravity="center"
-        android:id="@+id/day"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        tools:text="17  \u00b0" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/city_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/search_butto"
+                android:hint="Wprowadz miasto" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/search_butto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_search" />
+
+    </RelativeLayout>
+
+
 </LinearLayout>

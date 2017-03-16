@@ -2,14 +2,14 @@ package com.example.rent.myapplication;
 
 import com.google.gson.annotations.SerializedName;
 
-public class WeatherList {
+public class WeatherDetail {
 
 
     private String location;
 
     private String temperature;
 
-    private String description;
+    private String skytext;
 
     private String humidity;
 
@@ -29,7 +29,7 @@ public class WeatherList {
     }
 
     public String getDescription() {
-        return description;
+        return skytext;
     }
 
     public String getHumidity() {

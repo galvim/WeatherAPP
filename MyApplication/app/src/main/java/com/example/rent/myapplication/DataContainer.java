@@ -6,9 +6,9 @@ package com.example.rent.myapplication;
 
 public class DataContainer {
 
-    private WeatherList data;
+    private WeatherDetail data;
 
-    public WeatherList getData() {
+    public WeatherDetail getData() {
         return data;
     }
 }
